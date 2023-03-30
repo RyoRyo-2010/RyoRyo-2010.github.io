@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja" style="--on_aa_display:none;--off_aa_display:block;--end_aa_display:none">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="program.js"></script>
+    <title>URLオンタイマー</title>
+</head>
+<body>
+    <!-- <style>
+        :root{
+            --on_aa_display:none;
+            --off_aa_display:block;
+            --end_aa_display:none;
+        }
+    </style> -->
+    <h1>URLオンタイマー</h1>
+    <p>URL:<input type="text" id="url">←http:// , https:// とかつけること！<button onclick="open_url(document.getElementById('url').value)">リンクが開けるかチェック！</button></p>
+    <p>オンタイマー:<input type="time" id="time"></p>
+    <p><button id="taiki_chenge" class="start" onclick="start_onclick()">待機開始！</button></p>
+    <p>IntervalID:<span id="IntervalID"></span></p>
+    <div style="font-family: 'ＭＳ Ｐゴシック','ＭＳＰゴシック','MSPゴシック','MS Pゴシック';font-size:16px;line-height:18px;display: var(--on_aa_display);" id="on_aa">
+        `∧_∧　そのまま<br>
+        ( ･∀･) ﾏﾀｰﾘで<br>
+        ( つ つ お待ち下さい<br>
+    </div>
+    <div style="font-family: 'ＭＳ Ｐゴシック','ＭＳＰゴシック','MSPゴシック','MS Pゴシック';font-size:16px;line-height:18px;display: var(--off_aa_display);" id="off_aa">
+        　　　　　∧＿∧<br>
+        　　　　 （ ´∀｀ ） ～♪<br>
+        ﾊﾟﾝﾊﾟﾝ　/　　_ノ⌒⌒⌒`～､_<br>
+        ε(￣⊂人　//⌒　　 ﾉ　　ヽ）<br>
+        ⊂ﾆﾆﾆﾆﾆﾆﾆﾆニニニニニﾆ⊃<br>
+    </div>
+    <div style="font-family: 'ＭＳ Ｐゴシック','ＭＳＰゴシック','MSPゴシック','MS Pゴシック';font-size:16px;line-height:18px;display: var(--end_aa_display);" id="end_aa">
+        ｷﾀ―――(ﾟ∀ﾟ)―――― !!
+    </div>
+    <p>※プログラムが雑なので、正確でないことがあります。</p>
+</body>
+</html>
