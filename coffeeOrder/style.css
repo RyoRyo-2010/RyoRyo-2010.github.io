@@ -1,0 +1,43 @@
+.item {
+    display: grid;
+    grid-template-rows: 70% 20%;
+    grid-template-columns: 100%;
+    --r: 50vh;
+    width: var(--r);
+    min-width: var(--r);
+    height: var(--r);
+    border: 3px;
+    border-radius: 10px;
+    border-style: solid;
+    /* display: flex; */
+}
+
+.itemImage {
+    width: auto;
+    height: 100%;
+    
+    /* display: flex; */
+    /* grid-row: 1;
+    grid-column: 1; */
+}
+
+.plusButton{
+    width : auto;
+    height : 100%; 
+}
+
+.minusButton{
+    width : auto;
+    height : 100%; 
+}
+
+#selectItem {
+    display: flex;
+    margin: 3px;
+}
+
+.sumFooter{
+    display: block;
+    font-size: xx-large;
+    text-align: right;
+}

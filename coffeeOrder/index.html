@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コーヒー注文</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>いらっしゃいませ。商品を選んでください。</h1>
+
+    <template id="itemTemplate">
+        <div class="item" price="">
+            <div style="grid-row: 1; grid-column: 1;">
+                <span style="font-size: x-large;" class="itemName"></span>
+                <img src="" class="itemImage" alt="">
+            </div>
+            
+            <div style="grid-row: 2; grid-column: 1;">           
+                <span class="itemCounter" id="countItem," count="0" style="font-size: xx-large;">個数:0個</span>
+                <input type="image" class="plusButton" src="image/plus.png" onclick="changeCount(this,true);">
+                <!-- <button class="plusButton" onclick="plus(this,true)">
+                    <img src="image/plus.png" alt="個数を増やす">
+                </button> -->
+                <input type="image" class="minusButton" src="image/minus.png" onclick="changeCount(this,false);">
+                <!-- <img src="image/minus.png" alt="個数を減らす" class="minusButton" onclick="minus(this,false)"> -->
+            </div>
+        </div>
+    </template>
+    <div id="selectItem">
+        <!-- <div class="item" id="0">
+            <div style="grid-row: 1; grid-column: 1;">
+                <span style="font-size: x-large;">レギュラーコーヒー</span>
+                <img src="image/coffee_cup_paper_sleeve.png" class="itemImage" alt="レギュラーコーヒー">
+            </div>
+            
+            <div style="grid-row: 2; grid-column: 1;">           
+                <span id="countItem,0" count="0" style="font-size: xx-large;">個数:0個</span>
+                <img src="image/plus.png" alt="個数を増やす" class="plusButton" onclick="console.log(this)">
+                <img src="image/minus.png" alt="個数を減らす" class="minusButton" onclick="minus(0)">
+            </div>
+        </div> -->
+    </div>
+    <footer class="sumFooter">
+        合計金額:<span id="sum">0</span>円
+    </footer>
+</body>
+</html>

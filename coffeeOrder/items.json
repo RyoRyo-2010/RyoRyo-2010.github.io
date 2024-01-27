@@ -1,0 +1,19 @@
+{
+    "Items":[
+        {
+            "name":"レギュラーコーヒー",
+            "image_src":"image/regular.png",
+            "price":100
+        },
+        {
+            "name":"カプチーノ",
+            "image_src":"image/cappuccino.png",
+            "price":150
+        },
+        {
+            "name":"カフェモカ",
+            "image_src":"image/cafeMocha.png",
+            "price":500
+        }
+    ]
+}
