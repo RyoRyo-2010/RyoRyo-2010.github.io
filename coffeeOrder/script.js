@@ -3,45 +3,21 @@ loadJSON();
 function changeCount(button,isPlus) {
     let thisitem = button.parentElement.parentElement;
     let countE = thisitem.querySelector(".itemCounter");
-    let count = Number(countE.getAttribute("count"));
+    let count = Number(countE.innerText);
     if(isPlus) {
         count++;
     }else if(count > 0){
         count--;
     }
-    countE.setAttribute("count",count)
-    countE.innerText = `個数:${count}個`;
+    countE.innerText = count;
 
     //集計
     let items = document.querySelectorAll(".item");
     let sum = 0;
     for(let item of items) {
-        sum += Number(item.querySelector(".itemCounter").getAttribute("count")) * Number(item.getAttribute("price"));
+        sum += Number(item.querySelector(".itemCounter").innerText) * Number(item.querySelector(".itemPrice").innerText);
     }
     document.querySelector("#sum").innerText = sum;
-}
-
-function plus(itemID) {
-    let countE = document.getElementById(`countItem,${itemID}`);
-    //増やす
-    let count = countE.getAttribute("count");
-    count = Number(count);
-    count++;
-    countE.setAttribute("count",count)
-    countE.innerText = `個数:${count}個`;
-}
-
-function minus(itemID) {
-    let countE = document.getElementById(`countItem,${itemID}`);
-    //増やす
-    let count = countE.getAttribute("count");
-    count = Number(count);
-    count--;
-    if(count < 0) {
-        count = 0;
-    }
-    countE.setAttribute("count",count)
-    countE.innerText = `個数:${count}個`;
 }
 
 function loadJSON() {
@@ -58,17 +34,26 @@ function loadJSON() {
             //テンプレートコピー
             const template = document.getElementById("itemTemplate");
             const content = template.content.cloneNode(true);
-            // content.querySelector(".item").id = ""
+            content.querySelector(".itemName").innerText = item.name;
+            content.querySelector(".itemPrice").innerText = item.price;
             content.querySelector(".itemImage").src = item.image_src;
             content.querySelector(".itemImage").alt = `${item.name}の画像`;
-            content.querySelector(".itemCounter").id = `countItem,${index}`;
-            // content.querySelector(".plusButton").onclick = `plus(${index})`;
-            // content.querySelector(".minusButton").onclick = `minus(${index})`;
-            content.querySelector(".itemName").innerHTML = `${item.name} (${item.price}円)`;
-            content.querySelector(".item").setAttribute("price",item.price);
-            document.getElementById("selectItem").appendChild(content);
+
+            document.getElementById("itemList").appendChild(content);
             index++;
         }
+
+        //フッター分浮かせる
+        document.querySelector("#onFooter").setAttribute("style",`height : ${document.querySelector("#sumFooter").offsetHeight}px;`);
       };
     xhr.send();
+}
+
+function reset() {
+    let items = document.querySelectorAll(".itemCounter");
+    for(let item of items) {
+        item.innerText = 0;
+    }
+    document.querySelector("#sum").innerText = 0;
+
 }

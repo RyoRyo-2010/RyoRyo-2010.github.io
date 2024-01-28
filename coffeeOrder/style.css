@@ -1,43 +1,65 @@
+#itemList {
+    display: flex;
+	justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
 .item {
     display: grid;
-    grid-template-rows: 70% 20%;
+    grid-template-rows: 20% 60% 15% 5%;
     grid-template-columns: 100%;
-    --r: 50vh;
+    --r: 350px;
     width: var(--r);
-    min-width: var(--r);
+    /* min-width: var(--r); */
     height: var(--r);
     border: 3px;
     border-radius: 10px;
     border-style: solid;
     /* display: flex; */
+
+    /* .itemの中でgridに分けてから配置する。*/
+}
+
+.aboutItem {
+    grid-row: 1;
+    grid-column: 1;
+    font-size: xx-large;
+    margin-left: 10%;
 }
 
 .itemImage {
     width: auto;
     height: 100%;
-    
-    /* display: flex; */
-    /* grid-row: 1;
-    grid-column: 1; */
+    grid-row: 2;
+    grid-column: 1;
 }
 
-.plusButton{
+.itemCount {
+    grid-row: 3;
+    grid-column: 1;
+}
+
+.Button{
     width : auto;
     height : 100%; 
 }
 
-.minusButton{
-    width : auto;
-    height : 100%; 
+.itemCount {
+    font-size: x-large;
 }
 
-#selectItem {
-    display: flex;
-    margin: 3px;
-}
-
-.sumFooter{
+#sumFooter{
     display: block;
     font-size: xx-large;
     text-align: right;
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 15%;
+    padding: 10px;
+    background-color: #44b4f5;
+    /* color: #FFFFFF;*/
 }

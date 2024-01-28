@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>コーヒー注文</title>
+    <title>コーヒーオーダー</title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" href="coffee.ico">
     <script src="script.js"></script>
 </head>
 <body>
@@ -12,37 +13,31 @@
 
     <template id="itemTemplate">
         <div class="item" price="">
-            <div style="grid-row: 1; grid-column: 1;">
-                <span style="font-size: x-large;" class="itemName"></span>
-                <img src="" class="itemImage" alt="">
+            <div class="aboutItem">
+                <span class="itemName"></span>
+                (
+                <span class="itemPrice"></span>
+                円)
             </div>
+
+            <img src="" class="itemImage" alt="">
             
-            <div style="grid-row: 2; grid-column: 1;">           
-                <span class="itemCounter" id="countItem," count="0" style="font-size: xx-large;">個数:0個</span>
-                <input type="image" class="plusButton" src="image/plus.png" onclick="changeCount(this,true);">
-                <!-- <button class="plusButton" onclick="plus(this,true)">
-                    <img src="image/plus.png" alt="個数を増やす">
-                </button> -->
-                <input type="image" class="minusButton" src="image/minus.png" onclick="changeCount(this,false);">
-                <!-- <img src="image/minus.png" alt="個数を減らす" class="minusButton" onclick="minus(this,false)"> -->
+            <div class="itemCount">           
+                個数:
+                <span class="itemCounter">0</span>
+                個
+                <input type="image" class="Button" src="image/plus.png" onclick="changeCount(this,true);">
+                <input type="image" class="Button" src="image/minus.png" onclick="changeCount(this,false);">
             </div>
         </div>
     </template>
-    <div id="selectItem">
-        <!-- <div class="item" id="0">
-            <div style="grid-row: 1; grid-column: 1;">
-                <span style="font-size: x-large;">レギュラーコーヒー</span>
-                <img src="image/coffee_cup_paper_sleeve.png" class="itemImage" alt="レギュラーコーヒー">
-            </div>
-            
-            <div style="grid-row: 2; grid-column: 1;">           
-                <span id="countItem,0" count="0" style="font-size: xx-large;">個数:0個</span>
-                <img src="image/plus.png" alt="個数を増やす" class="plusButton" onclick="console.log(this)">
-                <img src="image/minus.png" alt="個数を減らす" class="minusButton" onclick="minus(0)">
-            </div>
-        </div> -->
+
+    <div id="itemList">
+        
     </div>
-    <footer class="sumFooter">
+    <div id="onFooter"></div>
+    <footer id="sumFooter">
+        <input type="image" src="image/reset.png" class="Button" onclick="reset()">
         合計金額:<span id="sum">0</span>円
     </footer>
 </body>
