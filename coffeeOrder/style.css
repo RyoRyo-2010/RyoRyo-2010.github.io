@@ -9,7 +9,7 @@
     display: grid;
     grid-template-rows: 20% 60% 15% 5%;
     grid-template-columns: 100%;
-    --r: 350px;
+    --r: 500px;
     width: var(--r);
     /* min-width: var(--r); */
     height: var(--r);
@@ -24,7 +24,7 @@
 .aboutItem {
     grid-row: 1;
     grid-column: 1;
-    font-size: xx-large;
+    font-size: calc(var(--r) * 0.074);
     margin-left: 10%;
 }
 
@@ -38,6 +38,7 @@
 .itemCount {
     grid-row: 3;
     grid-column: 1;
+    font-size: calc(var(--r) * 0.094);
 }
 
 .Button{
@@ -46,7 +47,7 @@
 }
 
 .itemCount {
-    font-size: x-large;
+    font-size: calc(var(--r) * 0.08);
 }
 
 #sumFooter{
