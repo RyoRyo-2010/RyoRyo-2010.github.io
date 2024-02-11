@@ -1,33 +1,36 @@
 {
     "Items":[
         {
-            "name":"レギュラーコーヒー",
-            "image_src":"image/regular.png",
-            "price":100
-        },
-        {
-            "name":"カプチーノ",
-            "image_src":"image/cappuccino.png",
+            "name":"コーヒー",
+            "image_src":"https://iwakunipg.sakura.ne.jp/iwakunipg/web/sites/default/files/styles/medium/public/2024-02/coffee.png",
             "price":150
-        },
-        {
-            "name":"カフェモカ",
-            "image_src":"image/cafeMocha.png",
-            "price":500
-        },
-        {
-            "name":"カフェモカ",
-            "image_src":"image/cafeMocha.png",
-            "price":500
-        },
-        {
-            "name":"カフェモカ",
-            "image_src":"image/cafeMocha.png",
-            "price":500
-        },
-        {
-            "name":"カプチーノ",
-            "image_src":"image/cappuccino.png",
+        },{
+            "name":"エスプレッソ",
+            "image_src":"https://iwakunipg.sakura.ne.jp/iwakunipg/web/sites/default/files/styles/medium/public/2024-02/espresso.png",
+            "price":200
+        },{
+            "name":"桜餅",
+            "image_src":"https://iwakunipg.sakura.ne.jp/iwakunipg/web/sites/default/files/styles/medium/public/2024-02/sakura_mochi.png",
+            "price":150
+        },{
+            "name":"いちご大福",
+            "image_src":"https://iwakunipg.sakura.ne.jp/iwakunipg/web/sites/default/files/styles/medium/public/2024-02/strawberry_daifuku.png",
+            "price":150
+        },{
+            "name":"どら焼",
+            "image_src":"https://iwakunipg.sakura.ne.jp/iwakunipg/web/sites/default/files/styles/medium/public/2024-02/dorayaki_red_bean.png",
+            "price":100
+        },{
+            "name":"豆大福",
+            "image_src":"https://iwakunipg.sakura.ne.jp/iwakunipg/web/sites/default/files/styles/medium/public/2024-02/bean_daifuku.png",
+            "price":150
+        },{
+            "name":"くし団子",
+            "image_src":"https://iwakunipg.sakura.ne.jp/iwakunipg/web/sites/default/files/styles/medium/public/2024-02/kushi_dango.png",
+            "price":150
+        },{
+            "name":"みたらし団子",
+            "image_src":"https://iwakunipg.sakura.ne.jp/iwakunipg/web/sites/default/files/styles/medium/public/2024-02/mitarashi_dango.png",
             "price":150
         }
     ]
