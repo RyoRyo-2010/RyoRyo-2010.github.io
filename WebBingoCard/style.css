@@ -1,0 +1,25 @@
+        .center {
+            text-align: center;
+        }
+
+        table {
+            margin: auto
+        }
+
+        .button {
+            font-size: 40px;
+            width: 60.5px;
+            height: 51px;
+        }
+
+        .start_button {
+            font-size: large;
+        }
+
+        #card_data{
+            display:none;
+        }
+
+        .version {
+            text-align: right;
+        }
