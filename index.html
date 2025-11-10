@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ホームページ</title>
+    <style>
+        :root{--max-width:760px;--accent:#1a73e8;--bg:#fff}
+        html,body{height:100%}
+        body{
+            font-family: "Hiragino Kaku Gothic ProN","Noto Sans JP","Meiryo",sans-serif;
+            background:#f7f7f8;
+            color:#111;
+            margin:0;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:40px 16px;
+        }
+        .container{
+            max-width:var(--max-width);
+            width:100%;
+            background:var(--bg);
+            padding:28px 32px;
+            box-shadow:0 6px 18px rgba(15,15,15,0.06);
+            border-radius:10px;
+        }
+        h1{margin:0 0 12px;font-size:1.8rem;font-weight:700}
+        h2{margin:18px 0 6px;font-size:1.05rem}
+        a{color:var(--accent);text-decoration:none}
+        a:hover{text-decoration:underline}
+        p{margin:0 0 12px;line-height:1.7;color:#333}
+        .footer{font-size:0.85rem;color:#666;margin-top:16px}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>いろいろ HTML 置き場</h1>
+
+        <h2><a href="gps.html">gps.html</a></h2>
+        <p>目的地までの距離をリアルタイムで表示する Web アプリ。ChatGPT 丸投げ。正しいかは知りません。</p>
+
+        <h2><a href="trigonometric_function/">三角比計算機</a></h2>
+        <p>直角三角形の 2 つ以上の辺の値から三角比を計算。たぶんいろいろ不具合あり。</p>
+
+        <h2>注意</h2>
+        <p class="footer">作者は、皆さんがこのツールを使用したことによる一切の不具合、事故などの責任を負いません。自己責任でご利用ください。</p>
+    </div>
+</body>
+
+</html>
