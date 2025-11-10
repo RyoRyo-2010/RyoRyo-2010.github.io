@@ -1,0 +1,31 @@
+body {
+    font-family: serif;
+}
+
+.triangle-figure {
+    width: 280px;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+table {
+    border: 2px solid #111111;
+    border-collapse: collapse;
+    min-width: 80px;
+}
+
+th,td {
+    border: 1px solid #555555;
+}
+
+.result-label {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+#keisan_button {
+    font-size: 30px;
+}

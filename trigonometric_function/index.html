@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>三角比計算機</title>
+        <link rel="stylesheet" href="res/style-ai.css">
+    </head>
+
+    <body>
+        <h1>三角比計算機</h1>
+        <p>次の図の文字に対応する値をテキストボックスに入力すると、自動で計算します</p>
+        <object data="res/triangle3.svg" type="image/svg+xml" class="triangle-figure"></object>
+
+        <div class="number-form">
+            <h2>入力</h2>
+            <ul>
+                <li>
+                    <label for="a_number">aの値:</label><input type="number" id="a_number" min="0">
+                </li>
+                <li>
+                    <label for="b_number">bの値:</label><input type="number" id="b_number" min="0">
+                </li>
+                <li>
+                    <label for="c_number">cの値:</label><input type="number" id="c_number" min="0">
+                </li>
+            </ul>
+
+            <button id="keisan_button">計算！</button>
+        </div>
+
+        <div class="result-page">
+            <h2>出力</h2>
+            <table>
+                <caption>計算結果</caption>
+                <thead>
+                    <tr>
+                        <th>式</th>
+                        <th>値</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="result-label">sin θ</th>
+                        <td><span id="sin_result"></span></td>
+                    </tr>
+                    <tr>
+                        <th class="result-label">cos θ</th>
+                        <td><span id="cos_result"></span></td>
+                    </tr>
+                    <tr>
+                        <th class="result-label">tan θ</th>
+                        <td><span id="tan_result"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <script src="res/keisan.js"></script>
+
+    </body>
+
+</html>
