@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="./style.css" rel="stylesheet">
+	<script src="./script.js"></script>
+	<title>期末の点数計算</title>
+</head>
+<body>
+	<h1>点数計算</h1>
+	<p>Ver:0.1</p>
+	<p><a href="https://www.tokuyama.ac.jp/">徳山高専</a>1年生の単位が出るか計算するプログラムです</p>
+	<h2>注意</h2>
+	<ul>
+		<li>現在、歴史未対応です</li>
+		<li>科目を間違えないように注意</li>
+		<li>科目、点数を変更すると自動で計算します</li>
+	</ul>
+	<h2>入力</h2>
+
+	<div id="subject-options">
+		<form id="subjectForm">
+			<fieldset>
+				<legend>科目を選択</legend>
+				<label><input type="radio" name="subject" value="数学1A" checked> 数学1A</label><br>
+				<label><input type="radio" name="subject" value="数学1B"> 数学1B</label><br>
+				<label><input type="radio" name="subject" value="化学基礎"> 化学基礎</label><br>
+				<label><input type="radio" name="subject" value="物理基礎"> 物理基礎</label><br>
+				<label><input type="radio" name="subject" value="政治・経済"> 政治・経済</label><br>
+				<label><input type="radio" name="subject" value="保健"> 保健</label><br>
+				<label><input type="radio" name="subject" value="基礎コンピュータ工学"> 基礎コンピュータ工学</label><br>
+			</fieldset>
+		</form>
+	</div>
+
+	<div id="inputMenu">
+		<ul>
+			<li>
+				<label for="Ten0">前期中間<input id="Ten0" type="number" min="0" max="100" step="1" value="0"></label>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label for="Ten0">前期期末<input id="Ten1" type="number" min="0" max="100" step="1" value="0"></label>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label for="Ten0">後期中間<input id="Ten2" type="number" min="0" max="100" step="1" value="0"></label>
+			</li>
+		</ul>
+	</div>
+	<h2>計算結果</h2>	
+	<div id="resultMenu">
+		<table>
+			<caption>計算結果のまとめ</caption>
+			<thead>
+				<tr>
+					<th scope="col">項目</th>
+					<th scope="col">値</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">科目</th>
+					<td><span id="Subject"></span></td>
+				</tr>
+				<tr>
+					<th scope="row">テストの合計点</th>
+					<td><span id="TestSum">0</span>[点]</td>
+				</tr>
+				<tr>
+					<th scope="row">可を取るための点数</th>
+					<td><span id="KaScore">0</span>[点]</td>
+				</tr>
+				<tr>
+					<th scope="row">良を取るための点数</th>
+					<td><span id="RyouScore">0</span>[点]</td>
+				</tr>
+				<tr>
+					<th scope="row">優を取るための点数</th>
+					<td><span id="YuuScore">0</span>[点]</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
