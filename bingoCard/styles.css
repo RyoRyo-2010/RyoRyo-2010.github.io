@@ -1,0 +1,47 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  background: #f7f7fb;
+  color: #222;
+}
+
+h1 {
+  margin: 0 0 12px 0;
+}
+
+#bingo {
+  border-collapse: collapse;
+}
+
+#bingo td {
+  padding: 6px;
+}
+
+.cell-btn {
+  width: 72px;
+  height: 72px;
+  font-size: 1.25rem;
+  border-radius: 8px;
+  border: 1px solid #bdbfc6;
+  background: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.cell-btn:focus {
+  outline: 3px solid rgba(34,119,255,0.15);
+}
+
+.cell-btn.selected {
+  background: #ffd54f;
+}
+
+@media (max-width:420px) {
+  .cell-btn { width:56px; height:56px; font-size:1rem; }
+}
